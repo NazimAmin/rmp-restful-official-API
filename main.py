@@ -8,7 +8,7 @@ app = Flask(__name__)
 RMP_BASE_URL = 'http://www.ratemyprofessors.com/api/professors/'
 RMP_HEADERS = {
         'Content-Type' : 'application/json',
-        'X-Auth-Token' : '20vkiiqon89ioc9o##############',
+        'X-Auth-Token' : '20vkiiqon89i#############',
     }
 
 def get_prof_id( name ):
@@ -31,7 +31,7 @@ def set_hot ( value ):
     if value is not None:
         if value < 0:
             return 1
-        elif 0 <= value <= 50:
+        elif 0 <= value <= 10:
             return 2
         else:
             return 3
